@@ -49,6 +49,12 @@ onAuthStateChanged(auth, (user) => {
 ### Getting Data From Firestore
 
 ```javascript
+// Importing collection,getDocs & getFirestore
+import {
+  collection,
+  getDocs,
+  getFirestore,
+} from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js";
 const db = getFirestore();
 const querySnapshot = await getDocs(collection(db, "dashboard-info"));
 querySnapshot.forEach((doc) => {
